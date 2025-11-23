@@ -39,28 +39,4 @@ else:
     # cv2.waitKey(0)
     # cv2.destroyAllWindows()
 
-# #突然意识到背景色转换，应该避免图形内白色被修改
-# #流程三：
-# import cv2
-# import numpy as np
-
-# gray = cv2.imread("/home/xiehan/picture/work.png",0)#获取单通道灰度图
-# # 1. 灰度+二值化（突出图形轮廓）
-# ret, binary = cv2.threshold(gray, 150, 255, cv2.THRESH_BINARY_INV)
-# # 2. 找图形轮廓
-# contours, _ = cv2.findContours(binary, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-# # 3. 生成“图形区域”掩码
-# mask = np.zeros_like(gray)
-# cv2.drawContours(mask, contours, -1, 255, cv2.FILLED)
-# # 4. 只改“掩码外的背景”为黑色
-# img = cv2.imread("/home/xiehan/picture/work.png")
-# result_contour = img.copy()
-# mask_3ch = cv2.cvtColor(mask,cv2.COLOR_GRAY2BGR)
-# result_contour[mask == 0] = [0,0,0]
-
-# # 保存结果
-# cv2.imwrite("task3_2.png", result_contour)
-# cv2.imshow("result", result_contour)
-# cv2.waitKey(0)
-# cv2.destroyAllWindows()
 

@@ -21,21 +21,3 @@ cv2.imshow("Result", result)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
 
-# import cv2
-# import numpy as np
-
-# img = cv2.imread("/home/xiehan/picture/work.png")
-# gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-# _, binary = cv2.threshold(gray, 200, 255, cv2.THRESH_BINARY_INV)
-# contours, _ = cv2.findContours(binary, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-
-# result = img.copy()
-# for cnt in contours:
-#     # 计算轮廓的外接矩形
-#     x, y, w, h = cv2.boundingRect(cnt)
-#     # 画矩形（红色，线宽2）
-#     cv2.rectangle(result, (x, y), (x+w, y+h), (0, 0, 255), 2)
-
-# cv2.imwrite("文字外接矩形.png", result)
-# cv2.imshow("Result", result)
-# cv2.waitKey(0)

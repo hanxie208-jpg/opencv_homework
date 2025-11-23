@@ -5,7 +5,7 @@ gray_img = cv2.imread("/home/xiehan/picture/work.png",0)
 #直接在读取的时候变成单通道灰度图
 
 save_path = "task2_final.png"#保存灰度图
-cv2.imwrite(save_path,gray_img)#cv2.imwrite ： 把处理好的图片保存成文件存入电脑
+cv2.imwrite(save_path,gray_img)#cv2.imwrite ：把处理好的图片保存成文件存入电脑
 
 print("task2灰度图已保存！")#提示
 
