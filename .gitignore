@@ -1,0 +1,6 @@
+.conda/
+build/
+.vscode/
+*.txt
+*.png
+!scripts/
